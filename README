@@ -1,5 +1,5 @@
 
-                             - Tiny Vectors -
+                              mat-vec-3
 
-Chicken Scheme implementation of 3 vectors, 3X3 matricies, and related
+A Chicken Scheme implementation of 3 vectors, 3X3 matricies, and related
 operators.
