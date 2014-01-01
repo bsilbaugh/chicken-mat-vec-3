@@ -1,12 +1,11 @@
 ;;;
-;;; 3 Vectors and 3X3 Matricies
+;;; Generic 3 vectors and 3X3 matrix operations
 ;;;
 ;;; Copyright 2013 Benjamin Silbaugh
 ;;;
-;;; Permission is granted to redistribute and/or modify subject to the
-;;; terms defined in the file LICENSE.
+;;; See LICENSE file for redistribution and modification permissions.
 
-(functor (mat-vec-3 (M (add sub mul div sqroot mx))) 
+(functor (mat-vec-3 (M (add sub mul div sqroot mx)))
   (make-vec
    make-mat
    magnitude
