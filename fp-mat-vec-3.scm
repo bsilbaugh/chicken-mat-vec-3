@@ -8,6 +8,7 @@
 (include "mat-vec-3.scm")
 
 (module float (add sub mul div sqroot mx)
+  (import scheme chicken)
   (define add fp+)
   (define sub fp-)
   (define mul fp*)
@@ -15,4 +16,4 @@
   (define sqroot fpsqrt)
   (define mx fpmax))
 
-(module fp-mat-vec-3 = (mat-vec-3 float)
+(module fp-mat-vec-3 = (mat-vec-3 float))

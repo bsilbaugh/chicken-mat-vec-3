@@ -8,6 +8,7 @@
 (include "mat-vec-3.scm")
 
 (module num (add sub mul div sqroot mx)
+  (import scheme chicken)
   (define add +)
   (define sub -)
   (define mul *)
