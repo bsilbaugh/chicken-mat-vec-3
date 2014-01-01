@@ -6,14 +6,26 @@
 ;;; Permission is granted to redistribute and/or modify subject to the
 ;;; terms defined in the file LICENSE.
 
-;;; === Module Parameters ===
+(functor (tiny-vectors (M (add sub mul div sqroot mx))) 
+  (make-vec
+   make-mat
+   magnitude
+   vec*sca
+   sca*vec
+   vec/sca
+   vec+vec
+   vec-vec
+   dot
+   cross
+   mat*sca
+   sca*mat
+   mat/sca
+   mat*vec
+   mat+mat
+   mat-mat
+   mat*mat)
 
-(define add fp+)
-(define sub fp-)
-(define mul fp*)
-(define div fp/)
-(define srt fpsqrt)
-(define mx fpmax)
+  (import scheme chicken M)
 
 ;;; === Misc Utilities ===
 
@@ -87,7 +99,7 @@
 (define (magnitude v)
   (let ((u (vec-elem-1 v)) (v (vec-elem-2 v)) (w (vec-elem-3 v)))
 	(let ((r (mx u (mx v w))))
-	  (mul r (srt (add (sq (div u r)) (sq (div v r)) (sq (div w r))))))))
+	  (mul r (sqroot (add (sq (div u r)) (sq (div v r)) (sq (div w r))))))))
 
 ;;; === Vector X Scalar Operations ===
 
@@ -195,3 +207,5 @@
 	(make-mat (dot a1 b1) (dot a1 b2) (dot a1 b3)
 			  (dot a2 b1) (dot a2 b2) (dot a2 b3)
 			  (dot a3 b1) (dot a3 b2) (dot a3 b3))))
+
+); end functor
