@@ -20,6 +20,12 @@
    mat-elem-31
    mat-elem-32
    mat-elem-33
+   mat-col-1
+   mat-col-2
+   mat-col-3
+   mat-row-1
+   mat-row-2
+   mat-row-3
    mag
    vec*sca
    sca*vec
@@ -136,7 +142,7 @@
 (define (dot u v)
   (let ((u1 (vec-elem-1 u)) (u2 (vec-elem-2 u)) (u3 (vec-elem-3 u))
 		(v1 (vec-elem-1 v)) (v2 (vec-elem-2 v)) (v3 (vec-elem-3 v)))
-	(add (mul u1 v1) (mul u2 v2) (mul u3 v3))))
+	(add (add (mul u1 v1) (mul u2 v2)) (mul u3 v3))))
 
 (define (cross u v)
   (let ((u1 (vec-elem-1 u)) (u2 (vec-elem-2 u)) (u3 (vec-elem-3 u))
