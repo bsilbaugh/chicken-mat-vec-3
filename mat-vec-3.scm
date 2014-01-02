@@ -7,7 +7,19 @@
 
 (functor (mat-vec-3 (M (add sub mul div sqroot maxabs)))
   (make-vec
+   vec-elem-1
+   vec-elem-2
+   vec-elem-3
    make-mat
+   mat-elem-11
+   mat-elem-12
+   mat-elem-13
+   mat-elem-21
+   mat-elem-22
+   mat-elem-23
+   mat-elem-31
+   mat-elem-32
+   mat-elem-33
    mag
    vec*sca
    sca*vec
