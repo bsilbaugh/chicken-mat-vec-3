@@ -5,4 +5,4 @@
 (install-extension
  'mat-vec-3
  '("mat-vec-3.so" "mat-vec-3.import.so")
- '((version "devel")))
+ '((version "0.1.0")))
