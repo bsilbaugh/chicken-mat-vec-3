@@ -1,7 +1,7 @@
 ;;;
 ;;; Generic 3 vectors and 3X3 matrix operations
 ;;;
-;;; Copyright 2013 Benjamin Silbaugh
+;;; Copyright 2013-2014 Benjamin Silbaugh
 ;;;
 ;;; See LICENSE file for redistribution and modification permissions.
 
