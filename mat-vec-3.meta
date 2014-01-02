@@ -2,7 +2,4 @@
 ((author "Benjamin Silbaugh")
  (synopsis "Operations on 3 vectors and 3X3 matricies.")
  (license "BSD")
- (files "mat-vec-3.setup"
-		"mat-vec-3.scm" 
-		"fp-mat-vec-3.scm" 
-		"num-mat-vec-3.scm"))
+ (files "mat-vec-3.setup" "mat-vec-3.scm"))

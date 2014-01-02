@@ -1,18 +1,8 @@
 
-;; Generate functor import file and compile
 (compile -s -O2 -d0 "mat-vec-3.scm" -j mat-vec-3)
 (compile -s -O2 -d0 "mat-vec-3.import.scm")
 
-;; Compile modules and subsequent import files
-(compile -s -O2 -d1 "fp-mat-vec-3.scm" -j fp-mat-vec-3)
-(compile -s -O2 -d0 "fp-mat-vec-3.import.scm")
-(compile -s -O2 -d1 "num-mat-vec-3.scm" -j num-mat-vec-3)
-(compile -s -O2 -d0 "num-mat-vec-3.import.scm")
-
-;; Install extension
 (install-extension
  'mat-vec-3
- '("mat-vec-3.so" "mat-vec-3.import.so"
-   "fp-mat-vec-3.so" "fp-mat-vec-3.import.so"
-   "num-mat-vec-3.so" "num-mat-vec-3.so")
+ '("mat-vec-3.so" "mat-vec-3.import.so")
  '((version "devel")))
