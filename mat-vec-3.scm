@@ -165,12 +165,12 @@
 ;;; === Matrix X Scalar Operations ===
 
 (define (mat*sca a c)
-  (mat-bin-map (lambda (aij) (mul c aij)) a))
+  (mat-uni-map (lambda (aij) (mul c aij)) a))
 
 (define (sca*mat c a) (mat*sca a c))
 
 (define (mat/sca a c)
-  (mat-bin-map (lambda (aij) (div aij c)) a))
+  (mat-uni-map (lambda (aij) (div aij c)) a))
 
 ;;; === Matrix X Vector Operations ===
 
