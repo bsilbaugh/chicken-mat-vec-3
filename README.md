@@ -1,6 +1,6 @@
 
- mat-vec-3
- =========
+mat-vec-3
+=========
 
 A Chicken Scheme functor: 3 vectors, 3X3 matricies, and their algebras.
 
