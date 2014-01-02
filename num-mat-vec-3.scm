@@ -5,7 +5,7 @@
 ;;; 
 ;;; See LICENSE file for modification and redistribution permissions.
 
-(include "mat-vec-3.scm")
+(use mat-vec-3)
 
 (module num (add sub mul div sqroot mx)
   (import scheme chicken)
