@@ -5,7 +5,7 @@
 ;;;
 ;;; See LICENSE file for redistribution and modification permissions.
 
-(functor (mat-vec-3 (M (add sub mul div sqroot mx)))
+(functor (mat-vec-3 (M (add sub mul div sqroot maxabs)))
   (make-vec
    make-mat
    mag
@@ -97,8 +97,11 @@
 ;; Computes the magnitude of vector v (euclidean norm)
 (define (mag v)
   (let ((u (vec-elem-1 v)) (v (vec-elem-2 v)) (w (vec-elem-3 v)))
-	(let ((r (mx u (mx v w))))
-	  (mul r (sqroot (add (sq (div u r)) (sq (div v r)) (sq (div w r))))))))
+	(let ((r (maxabs u (maxabs v w))))
+	  (if (< 0 r)
+		  (mul r (sqroot (add (sq (div u r))
+						 (add (sq (div v r)) (sq (div w r))))))
+		  r))))
 
 ;;; === Vector X Scalar Operations ===
 
