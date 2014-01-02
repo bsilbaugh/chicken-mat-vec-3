@@ -8,7 +8,7 @@
 (functor (mat-vec-3 (M (add sub mul div sqroot mx)))
   (make-vec
    make-mat
-   magnitude
+   mag
    vec*sca
    sca*vec
    vec/sca
@@ -95,7 +95,7 @@
 ;;; === Vector Operations ===
 
 ;; Computes the magnitude of vector v (euclidean norm)
-(define (magnitude v)
+(define (mag v)
   (let ((u (vec-elem-1 v)) (v (vec-elem-2 v)) (w (vec-elem-3 v)))
 	(let ((r (mx u (mx v w))))
 	  (mul r (sqroot (add (sq (div u r)) (sq (div v r)) (sq (div w r))))))))
