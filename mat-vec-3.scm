@@ -108,7 +108,7 @@
 (define (sca*vec c v) (vec*sca v c))
 
 (define (vec/sca v c)
-  (vec-uni-map (lambda (x) (div x c))))
+  (vec-uni-map (lambda (x) (div x c)) v))
 
 ;;; === Vector X Vector Operations ===
 
